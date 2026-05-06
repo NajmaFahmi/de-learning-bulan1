@@ -1,0 +1,95 @@
+~~~~~~~~~~~~~~~~ MATERI LINUX ~~~~~~~~~~~~~~~~
+
+~~~~~~~~~ DAY 1
+
+## ls
+--> list files & folders 
+
+(venv_de) najma@192 bulan_1 % ls
+README.md	venv_de		week3
+
+
+## cd
+--> pindah directory 
+
+(venv_de) najma@192 bulan_1 % cd week3
+
+
+## pwd 
+--> print working directory 
+
+(venv_de) najma@192 week3 % pwd
+/Users/najma/de_learning/bulan_1/week3
+
+
+## touch
+--> create new file
+
+(venv_de) najma@192 week3 % touch hanyatest.txt
+(venv_de) najma@192 week3 % touch inicontoh.txt
+
+
+## mkdir 
+--> create new directory
+
+(venv_de) najma@192 week3 % mkdir foldertest
+
+
+## rm 
+--> delete file 
+
+(venv_de) najma@192 week3 % rm hanyatest.txt
+
+
+## rm -rf
+--> delete directory with its files
+
+(venv_de) najma@192 week3 % rm -rf foldertest
+
+
+## cat 
+--> show file's content
+
+(venv_de) najma@192 week3 % cat inicontoh.txt
+haii
+ini contoh
+ini juga contoh 
+apakah ini?
+ini semua contoh%                                                               (venv_de) najma@192 week3 % head -3 inicontoh.txt
+
+
+## head -n
+--> show N first row
+
+(venv_de) najma@192 week3 % head -3 inicontoh.txt
+haii
+ini contoh
+ini juga contoh 
+
+
+## tail -f
+--> monitor content file in real time (new row will show automatically)
+
+(venv_de) najma@192 week3 % tail -f inicontoh.txt
+haii
+ini contoh
+ini juga contoh 
+apakah ini?
+ini semua contoh
+kalau ini?  
+
+
+## grep 
+--> find certaiin word 
+
+(venv_de) najma@192 week3 % grep "kalau" inicontoh.txt
+kalau ini?
+
+
+## wc -l 
+--> count all rows in a file
+(venv_de) najma@192 week3 % wc -l inicontoh.txt
+       5 inicontoh.txt
+
+
+
