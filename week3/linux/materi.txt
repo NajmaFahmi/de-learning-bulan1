@@ -26,7 +26,7 @@ README.md	venv_de		week3
 --> create new file
 
 (venv_de) najma@192 week3 % touch hanyatest.txt
-(venv_de) najma@192 week3 % touch inicontoh.txt
+(venv_de) najma@192 week3 % touch ./linux/inicontoh.txt
 
 
 ## mkdir 
