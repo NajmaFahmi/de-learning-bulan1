@@ -11,7 +11,7 @@ class FilmRecord(BaseModel):
     description: str
     release_year: int 
     rental_duration: int 
-    rental_rate: Decimal
+    rental_rate: Decimal        #uang selalu pakai Decimal, jangan float
     length: int 
     rating: str
 
