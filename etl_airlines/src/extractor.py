@@ -4,6 +4,7 @@ import numpy as np
 import config
 from typing import List
 from src.logger import get_logger
+from src.ge_validator import validate_flights_data
 
 
 # panggil logger
@@ -16,9 +17,15 @@ def extract_data() -> List[FlightRecord]:
 
     data = pd.read_csv(config.AIRLINES_CSV)
     data = data.replace({np.nan: None})
+
+    # Validasi dengan GE
+    if not validate_flights_data(data):
+        raise ValueError("Data gagal validasi GE -- pipeline dihentikan")
+    
+    # Validasi dengan Pydantic model
     extracted_data = []
     errors = 0
-
+    
     for index, row in data.iterrows():
         try:
             validated_row = FlightRecord(**row.to_dict())
